@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Neo Academy — For the love of learning.</title>
+  <meta name="description" content="Neo Academy is a modern preschool and primary school in Teluk Gong, Jakarta Utara. Secondary and high school coming soon." />
+  <meta name="theme-color" content="#4f7361" />
+
+  <link rel="icon" type="image/png" href="neo-logo-dice-black@4x.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/index.css?v=7" />
+</head>
+<body>
+  <!-- =================== NAV =================== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__brand" aria-label="Neo Academy — home">
+        <img class="nav__logo" src="neo-logo-dice-black@4x.png" alt="Neo Academy" width="160" height="80" />
+      </a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Primary">
+        <a href="preschool.html">Preschool</a>
+        <a href="primary.html">Primary</a>
+        <a href="junior-high.html">Junior High</a>
+        <a href="senior-high.html">Senior High</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav__cta">
+        <a class="btn btn--primary btn--icon" href="https://wa.me/628119797809" target="_blank" rel="noopener" aria-label="Contact us on WhatsApp">
+          <svg class="btn__icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0 0 20.465 3.488"/>
+          </svg>
+          Contact us
+        </a>
+      </div>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- =================== HERO VIDEO =================== -->
+    <section class="hero" id="top">
+      <video
+        class="hero__video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+        poster="https://images.pexels.com/photos/8087867/pexels-photo-8087867.jpeg?auto=compress&cs=tinysrgb&w=1920"
+      >
+        <source src="https://videos.pexels.com/video-files/35701199/15130881_1920_1080_30fps.mp4" type="video/mp4" />
+        <source src="https://videos.pexels.com/video-files/33787984/14341199_1920_1080_30fps.mp4" type="video/mp4" />
+      </video>
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="hero__copy">
+        <h1 class="hero__title">Modern education.<br />Modern tools.</h1>
+        <p class="hero__sub">A preschool and primary school in Teluk Gong, Jakarta Utara — built for how children actually learn today.</p>
+      </div>
+    </section>
+
+    <!-- =================== LEVELS =================== -->
+    <section class="levels-section" id="levels">
+      <div class="levels-section__head">
+        <p class="levels-section__eyebrow">The Neo journey</p>
+        <h2 class="levels-section__title">One school.<br />Every age we're ready for.</h2>
+      </div>
+
+      <div class="levels-grid">
+        <a class="level-card" href="preschool.html">
+          <div class="level-card__media">
+            <img src="https://images.pexels.com/photos/8466901/pexels-photo-8466901.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Preschool teacher reading to a circle of children" loading="lazy" />
+          </div>
+          <div class="level-card__body">
+            <span class="level-card__chip">TK · Ages 3–6</span>
+            <h3>Preschool</h3>
+            <p>Let children be children — while they quietly fall in love with learning.</p>
+            <span class="level-card__cta">Explore preschool <span aria-hidden="true">›</span></span>
+          </div>
+        </a>
+
+        <a class="level-card" href="primary.html">
+          <div class="level-card__media">
+            <img src="https://images.pexels.com/photos/35753301/pexels-photo-35753301.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Primary students smiling at their desks" loading="lazy" />
+          </div>
+          <div class="level-card__body">
+            <span class="level-card__chip level-card__chip--primary">SD · Ages 6–12</span>
+            <h3>Primary</h3>
+            <p>Curiosity turns into confidence — through play, projects, and modern tools.</p>
+            <span class="level-card__cta">Explore primary <span aria-hidden="true">›</span></span>
+          </div>
+        </a>
+
+        <a class="level-card level-card--soon" href="junior-high.html">
+          <div class="level-card__media">
+            <img src="https://images.pexels.com/photos/8500643/pexels-photo-8500643.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Classroom with attentive students" loading="lazy" />
+          </div>
+          <div class="level-card__body">
+            <span class="level-card__chip level-card__chip--soon">SMP · Coming soon</span>
+            <h3>Junior High</h3>
+            <p>The next step in the Neo journey — built with the same care and curiosity.</p>
+            <span class="level-card__cta level-card__cta--muted">Opening soon</span>
+          </div>
+        </a>
+
+        <a class="level-card level-card--soon" href="senior-high.html">
+          <div class="level-card__media">
+            <img src="https://images.pexels.com/photos/10646610/pexels-photo-10646610.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Senior high students laughing together" loading="lazy" />
+          </div>
+          <div class="level-card__body">
+            <span class="level-card__chip level-card__chip--soon">SMA · Coming soon</span>
+            <h3>Senior High</h3>
+            <p>Preparing Neo graduates for the world beyond school — and the questions still ahead.</p>
+            <span class="level-card__cta level-card__cta--muted">Opening soon</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- =================== LIFE AT NEO VIDEO REEL =================== -->
+    <section class="reel" id="reel" aria-label="Life at Neo Academy">
+      <div class="reel__stage">
+        <ul class="reel__track" id="reelTrack">
+          <li class="reel__slide" aria-roledescription="slide">
+            <video muted playsinline preload="metadata"
+              poster="https://images.pexels.com/photos/8535234/pexels-photo-8535234.jpeg?auto=compress&cs=tinysrgb&w=1600">
+              <source src="https://videos.pexels.com/video-files/33787982/14341217_1920_1080_30fps.mp4" type="video/mp4" />
+            </video>
+            <div class="reel__caption">
+              <span class="reel__chip">Before the bell</span>
+              <p class="reel__cap-text">Our day starts outside, with sunshine and friends.</p>
+            </div>
+          </li>
+          <li class="reel__slide" aria-roledescription="slide">
+            <video muted playsinline preload="metadata"
+              poster="https://images.pexels.com/photos/8466901/pexels-photo-8466901.jpeg?auto=compress&cs=tinysrgb&w=1600">
+              <source src="https://videos.pexels.com/video-files/33787984/14341199_1920_1080_30fps.mp4" type="video/mp4" />
+            </video>
+            <div class="reel__caption">
+              <span class="reel__chip">Recess</span>
+              <p class="reel__cap-text">Ten minutes of run, chase, repeat.</p>
+            </div>
+          </li>
+          <li class="reel__slide" aria-roledescription="slide">
+            <video muted playsinline preload="metadata"
+              poster="https://images.pexels.com/photos/8088232/pexels-photo-8088232.jpeg?auto=compress&cs=tinysrgb&w=1600">
+              <source src="https://videos.pexels.com/video-files/35701199/15130881_1920_1080_30fps.mp4" type="video/mp4" />
+            </video>
+            <div class="reel__caption">
+              <span class="reel__chip">Jump-rope Fridays</span>
+              <p class="reel__cap-text">A Neo classic — every class, every week.</p>
+            </div>
+          </li>
+          <li class="reel__slide" aria-roledescription="slide">
+            <video muted playsinline preload="metadata"
+              poster="https://images.pexels.com/photos/8465500/pexels-photo-8465500.jpeg?auto=compress&cs=tinysrgb&w=1600">
+              <source src="https://videos.pexels.com/video-files/33787981/14341193_1920_1080_30fps.mp4" type="video/mp4" />
+            </video>
+            <div class="reel__caption">
+              <span class="reel__chip">Between classes</span>
+              <p class="reel__cap-text">Where the best conversations happen.</p>
+            </div>
+          </li>
+          <li class="reel__slide" aria-roledescription="slide">
+            <video muted playsinline preload="metadata"
+              poster="https://images.pexels.com/photos/8613083/pexels-photo-8613083.jpeg?auto=compress&cs=tinysrgb&w=1600">
+              <source src="https://videos.pexels.com/video-files/33787983/14341227_1920_1080_30fps.mp4" type="video/mp4" />
+            </video>
+            <div class="reel__caption">
+              <span class="reel__chip">Going home</span>
+              <p class="reel__cap-text">The last song of the day.</p>
+            </div>
+          </li>
+        </ul>
+
+        <button class="reel__nav reel__nav--prev" id="reelPrev" aria-label="Previous video">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="15 6 9 12 15 18"></polyline>
+          </svg>
+        </button>
+        <button class="reel__nav reel__nav--next" id="reelNext" aria-label="Next video">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="9 6 15 12 9 18"></polyline>
+          </svg>
+        </button>
+      </div>
+      <div class="reel__dots" id="reelDots" aria-hidden="true"></div>
+    </section>
+
+    <!-- =================== CTA / CONTACT =================== -->
+    <section class="cta" id="contact">
+      <div class="cta__inner">
+        <h2 class="cta__title">Come see Neo<br />in person.</h2>
+        <p class="cta__lead">The fastest way to meet us is a quick message. Chat with our team on WhatsApp — we'll help you pick the right campus and set up a visit.</p>
+
+        <a class="btn btn--wa" href="https://wa.me/628119797809?text=Hi%20Neo%20Academy%2C%20I%27d%20like%20to%20learn%20more%20and%20book%20a%20campus%20tour." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.304-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0 0 20.465 3.488"/>
+          </svg>
+          Chat on WhatsApp
+        </a>
+
+        <div class="campuses cta__wa">
+          <article class="campus">
+            <span class="campus__label">Preschool · TK</span>
+            <h3>Teluk Gong · Jalan B Raya</h3>
+            <p class="campus__addr">Jalan B Raya No. 175, RT 007/RW 08<br />Kelurahan Pejagalan, Penjaringan<br />Jakarta Utara 14450</p>
+            <ul class="campus__links">
+              <li><a href="tel:+628119797809">+62 811 979 7809</a></li>
+              <li><a href="https://wa.me/628119797809" rel="noopener">WhatsApp</a></li>
+            </ul>
+          </article>
+
+          <article class="campus">
+            <span class="campus__label">Primary · SD</span>
+            <h3>Teluk Gong · Jalan Gabus</h3>
+            <p class="campus__addr">Jalan Gabus No. 10, RT 008/RW 012<br />Kelurahan Pejagalan, Penjaringan<br />Jakarta Utara 14450</p>
+            <ul class="campus__links">
+              <li><a href="tel:+6281283178500">+62 812 8317 8500</a></li>
+              <li><a href="https://wa.me/6281283178500" rel="noopener">WhatsApp</a></li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="cta__hours">Open Monday – Friday, 7am – 4pm</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Neo Academy · For the love of learning.</p>
+  </footer>
+
+  <script src="js/index.js?v=7" defer></script>
+</body>
+</html>

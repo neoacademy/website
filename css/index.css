@@ -346,14 +346,14 @@ button { font-family: inherit; cursor: pointer; }
   overflow: hidden;
   background: var(--bg-soft);
 }
-.level-card__media img {
+.level-card__media :is(img, video) {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
   transition: transform 0.8s var(--ease);
 }
-.level-card:hover .level-card__media img { transform: scale(1.04); }
+.level-card:hover .level-card__media :is(img, video) { transform: scale(1.04); }
 .level-card__body {
   padding: 24px 24px 28px;
   display: flex;
@@ -396,7 +396,7 @@ button { font-family: inherit; cursor: pointer; }
 .level-card__cta--muted { color: var(--ink-40); }
 
 .level-card--soon { background: var(--bg-alt); }
-.level-card--soon .level-card__media img {
+.level-card--soon .level-card__media :is(img, video) {
   opacity: 0.7;
   filter: saturate(0.7);
 }
@@ -724,7 +724,7 @@ button { font-family: inherit; cursor: pointer; }
   aspect-ratio: 4 / 3;
   background: var(--bg-soft);
 }
-.feature__media img { width: 100%; height: 100%; object-fit: cover; }
+.feature__media :is(img, video) { width: 100%; height: 100%; object-fit: cover; }
 .feature__body h2 {
   font-size: clamp(32px, 4.4vw, 56px);
   line-height: 1.05;
@@ -745,8 +745,8 @@ button { font-family: inherit; cursor: pointer; }
   aspect-ratio: 4 / 3;
   background: var(--bg-soft);
 }
-.tile img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s var(--ease); }
-.tile:hover img { transform: scale(1.04); }
+.tile :is(img, video) { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s var(--ease); }
+.tile:hover :is(img, video) { transform: scale(1.04); }
 .tile figcaption {
   position: absolute;
   left: 20px;

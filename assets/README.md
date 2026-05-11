@@ -4,6 +4,18 @@ Drop files at the exact paths below — the HTML already points here. Filenames 
 
 If you add a new image (e.g. a 5th preschool tile), update the matching HTML to point at the new file.
 
+## Image OR video — your choice
+
+Every media slot accepts **either a JPG, an MP4, or both**:
+
+- Upload only the **JPG** → the still image renders
+- Upload only the **MP4** → the video autoplays (muted, looping)
+- Upload **both** → the video plays; the JPG shows as the loading frame
+
+The HTML uses `<video poster="...jpg"><source src="...mp4"></video>` for every slot. When the MP4 is missing, browsers fall back to the poster image, which looks identical to a static `<img>`. No code changes needed — just drop in whichever file you have.
+
+The MP4 path is always the JPG path with the extension swapped (e.g. `preschool.jpg` ↔ `preschool.mp4`). The reel section is the only exception: its videos and posters have separate filenames (`01-before-the-bell.mp4` and `01-before-the-bell-poster.jpg`).
+
 ## Layout
 
 ```

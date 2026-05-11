@@ -180,6 +180,8 @@ button { font-family: inherit; cursor: pointer; }
 }
 .btn--primary { background: var(--ink); color: #fff; }
 .btn--primary:hover { background: #000; }
+.btn--primary.btn--icon { background: #25D366; color: #fff; }
+.btn--primary.btn--icon:hover { background: #1fb657; }
 .btn--ghost { background: transparent; color: var(--ink); border-color: var(--ink); }
 .btn--ghost:hover { background: var(--ink); color: #fff; }
 .btn--wa { background: #25D366; color: #fff; padding: 16px 28px; font-size: 16px; }
@@ -409,7 +411,10 @@ button { font-family: inherit; cursor: pointer; }
   .levels-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (min-width: 1100px) {
-  .levels-grid { grid-template-columns: repeat(4, 1fr); }
+  .levels-grid {
+    grid-template-columns: repeat(2, minmax(0, 360px));
+    justify-content: center;
+  }
 }
 
 /* ---------- Video reel (peek carousel like DJI) ---------- */
@@ -570,15 +575,9 @@ button { font-family: inherit; cursor: pointer; }
 .cta__title {
   font-size: clamp(36px, 5.5vw, 64px);
   line-height: 1.05;
-  margin-bottom: 16px;
+  margin-bottom: 48px;
 }
-.cta__lead {
-  color: var(--ink-60);
-  font-size: clamp(16px, 1.6vw, 19px);
-  max-width: 640px;
-  margin: 0 auto 40px;
-}
-.cta__wa { margin-bottom: 64px; }
+.cta__wa { margin-bottom: 48px; }
 .cta__wa svg { width: 22px; height: 22px; }
 
 .campuses {
@@ -614,6 +613,11 @@ button { font-family: inherit; cursor: pointer; }
   font-size: 15px;
   line-height: 1.55;
   margin: 4px 0 8px;
+}
+.campus__hours {
+  color: var(--ink-60);
+  font-size: 14px;
+  margin-bottom: 4px;
 }
 .campus__links {
   display: flex;

@@ -62,6 +62,8 @@ ul { margin: 0; padding: 0; list-style: none; }
 button { font-family: inherit; cursor: pointer; }
 
 /* ---------- Nav ---------- */
+/* Temporarily hidden — remove this rule to bring the navigation back. */
+.nav { display: none; }
 .nav {
   position: fixed;
   top: 0;

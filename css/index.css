@@ -62,8 +62,10 @@ ul { margin: 0; padding: 0; list-style: none; }
 button { font-family: inherit; cursor: pointer; }
 
 /* ---------- Nav ---------- */
-/* Temporarily hidden — remove this rule to bring the navigation back. */
-.nav { display: none; }
+/* Temporarily hidden — remove these two lines to bring the menu back.
+   The logo and the Contact-us button stay visible. */
+.nav__links,
+.nav__toggle { display: none !important; }
 .nav {
   position: fixed;
   top: 0;

@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/index.css?v=7" />
+  <link rel="stylesheet" href="css/index.css?v=8" />
 </head>
 <body>
   <!-- =================== NAV =================== -->
@@ -52,10 +52,12 @@
         loop
         playsinline
         preload="auto"
-        poster="assets/home/hero/hero-poster.jpg"
+        data-desktop-poster="assets/home/hero/hero-desktop.jpg"
+        data-desktop-src="assets/home/hero/hero-desktop.mp4"
+        data-mobile-poster="assets/home/hero/hero-mobile.jpg"
+        data-mobile-src="assets/home/hero/hero-mobile.mp4"
       >
-        <source src="assets/home/hero/hero-1.mp4" type="video/mp4" />
-        <source src="assets/home/hero/hero-2.mp4" type="video/mp4" />
+        <source type="video/mp4" />
       </video>
       <div class="hero__overlay" aria-hidden="true"></div>
       <div class="hero__copy">
@@ -108,8 +110,11 @@
         <ul class="reel__track" id="reelTrack">
           <li class="reel__slide" aria-roledescription="slide">
             <video muted playsinline preload="metadata"
-              poster="assets/home/reel/01-before-the-bell-poster.jpg">
-              <source src="assets/home/reel/01-before-the-bell.mp4" type="video/mp4" />
+              data-desktop-poster="assets/home/reel/01-before-the-bell-desktop.jpg"
+              data-desktop-src="assets/home/reel/01-before-the-bell-desktop.mp4"
+              data-mobile-poster="assets/home/reel/01-before-the-bell-mobile.jpg"
+              data-mobile-src="assets/home/reel/01-before-the-bell-mobile.mp4">
+              <source type="video/mp4" />
             </video>
             <div class="reel__caption">
               <span class="reel__chip">Before the bell</span>
@@ -118,8 +123,11 @@
           </li>
           <li class="reel__slide" aria-roledescription="slide">
             <video muted playsinline preload="metadata"
-              poster="assets/home/reel/02-recess-poster.jpg">
-              <source src="assets/home/reel/02-recess.mp4" type="video/mp4" />
+              data-desktop-poster="assets/home/reel/02-recess-desktop.jpg"
+              data-desktop-src="assets/home/reel/02-recess-desktop.mp4"
+              data-mobile-poster="assets/home/reel/02-recess-mobile.jpg"
+              data-mobile-src="assets/home/reel/02-recess-mobile.mp4">
+              <source type="video/mp4" />
             </video>
             <div class="reel__caption">
               <span class="reel__chip">Recess</span>
@@ -128,8 +136,11 @@
           </li>
           <li class="reel__slide" aria-roledescription="slide">
             <video muted playsinline preload="metadata"
-              poster="assets/home/reel/03-jump-rope-fridays-poster.jpg">
-              <source src="assets/home/reel/03-jump-rope-fridays.mp4" type="video/mp4" />
+              data-desktop-poster="assets/home/reel/03-jump-rope-fridays-desktop.jpg"
+              data-desktop-src="assets/home/reel/03-jump-rope-fridays-desktop.mp4"
+              data-mobile-poster="assets/home/reel/03-jump-rope-fridays-mobile.jpg"
+              data-mobile-src="assets/home/reel/03-jump-rope-fridays-mobile.mp4">
+              <source type="video/mp4" />
             </video>
             <div class="reel__caption">
               <span class="reel__chip">Jump-rope Fridays</span>
@@ -138,8 +149,11 @@
           </li>
           <li class="reel__slide" aria-roledescription="slide">
             <video muted playsinline preload="metadata"
-              poster="assets/home/reel/04-between-classes-poster.jpg">
-              <source src="assets/home/reel/04-between-classes.mp4" type="video/mp4" />
+              data-desktop-poster="assets/home/reel/04-between-classes-desktop.jpg"
+              data-desktop-src="assets/home/reel/04-between-classes-desktop.mp4"
+              data-mobile-poster="assets/home/reel/04-between-classes-mobile.jpg"
+              data-mobile-src="assets/home/reel/04-between-classes-mobile.mp4">
+              <source type="video/mp4" />
             </video>
             <div class="reel__caption">
               <span class="reel__chip">Between classes</span>
@@ -148,8 +162,11 @@
           </li>
           <li class="reel__slide" aria-roledescription="slide">
             <video muted playsinline preload="metadata"
-              poster="assets/home/reel/05-going-home-poster.jpg">
-              <source src="assets/home/reel/05-going-home.mp4" type="video/mp4" />
+              data-desktop-poster="assets/home/reel/05-going-home-desktop.jpg"
+              data-desktop-src="assets/home/reel/05-going-home-desktop.mp4"
+              data-mobile-poster="assets/home/reel/05-going-home-mobile.jpg"
+              data-mobile-src="assets/home/reel/05-going-home-mobile.mp4">
+              <source type="video/mp4" />
             </video>
             <div class="reel__caption">
               <span class="reel__chip">Going home</span>
@@ -212,6 +229,6 @@
     <p>© <span id="year"></span> Neo Academy</p>
   </footer>
 
-  <script src="js/index.js?v=7" defer></script>
+  <script src="js/index.js?v=8" defer></script>
 </body>
 </html>

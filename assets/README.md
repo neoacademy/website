@@ -14,7 +14,19 @@ Every media slot accepts **either a JPG, an MP4, or both**:
 
 The HTML uses `<video poster="...jpg"><source src="...mp4"></video>` for every slot. When the MP4 is missing, browsers fall back to the poster image, which looks identical to a static `<img>`. No code changes needed — just drop in whichever file you have.
 
-The MP4 path is always the JPG path with the extension swapped (e.g. `preschool.jpg` ↔ `preschool.mp4`). The reel section is the only exception: its videos and posters have separate filenames (`01-before-the-bell.mp4` and `01-before-the-bell-poster.jpg`).
+The MP4 path is always the JPG path with the extension swapped (e.g. `preschool.jpg` ↔ `preschool.mp4`).
+
+## Desktop vs. mobile — for hero and reel only
+
+The **hero** and the **reel slides** load *different* files depending on the visitor's screen size (≤540px wide = mobile). Each slot has two name pairs: one ending in `-desktop` and one ending in `-mobile`.
+
+- `hero-desktop.jpg` / `hero-desktop.mp4` — shown on tablets and desktops
+- `hero-mobile.jpg` / `hero-mobile.mp4` — shown on phones
+- Reel: `01-before-the-bell-desktop.jpg` / `…-desktop.mp4` and `…-mobile.jpg` / `…-mobile.mp4`, and so on for slides 02–05
+
+There is **no fallback** between the two — if the mobile file is missing, mobile visitors see an empty slot (the desktop file is *not* used instead). Upload both pairs if you want both audiences to see the same content.
+
+The level cards, detail-page heroes, feature images, and tile galleries are *not* responsive — they use the single naming convention from the previous section.
 
 ## Layout
 
@@ -24,25 +36,36 @@ assets/
 │   └── logo.png                      Site logo (favicon + nav)
 ├── home/
 │   ├── hero/
-│   │   ├── hero-1.mp4                Looping hero background video (primary)
-│   │   ├── hero-2.mp4                Hero video fallback (browsers that don't play hero-1)
-│   │   └── hero-poster.jpg           Still shown before the hero video loads
+│   │   ├── hero-desktop.jpg          Hero still (≥541px viewports)
+│   │   ├── hero-desktop.mp4          Hero looping video (≥541px viewports)
+│   │   ├── hero-mobile.jpg           Hero still (≤540px viewports — phones)
+│   │   └── hero-mobile.mp4           Hero looping video (≤540px viewports)
 │   ├── levels/
 │   │   ├── preschool.jpg             Level card — Preschool
 │   │   ├── primary.jpg               Level card — Primary
 │   │   ├── junior-high.jpg           Level card — Junior High
 │   │   └── senior-high.jpg           Level card — Senior High
-│   └── reel/                         "Life at Neo" video carousel (5 slides)
-│       ├── 01-before-the-bell.mp4
-│       ├── 01-before-the-bell-poster.jpg
-│       ├── 02-recess.mp4
-│       ├── 02-recess-poster.jpg
-│       ├── 03-jump-rope-fridays.mp4
-│       ├── 03-jump-rope-fridays-poster.jpg
-│       ├── 04-between-classes.mp4
-│       ├── 04-between-classes-poster.jpg
-│       ├── 05-going-home.mp4
-│       └── 05-going-home-poster.jpg
+│   └── reel/                         "Life at Neo" carousel (5 slides, desktop + mobile each)
+│       ├── 01-before-the-bell-desktop.jpg
+│       ├── 01-before-the-bell-desktop.mp4
+│       ├── 01-before-the-bell-mobile.jpg
+│       ├── 01-before-the-bell-mobile.mp4
+│       ├── 02-recess-desktop.jpg
+│       ├── 02-recess-desktop.mp4
+│       ├── 02-recess-mobile.jpg
+│       ├── 02-recess-mobile.mp4
+│       ├── 03-jump-rope-fridays-desktop.jpg
+│       ├── 03-jump-rope-fridays-desktop.mp4
+│       ├── 03-jump-rope-fridays-mobile.jpg
+│       ├── 03-jump-rope-fridays-mobile.mp4
+│       ├── 04-between-classes-desktop.jpg
+│       ├── 04-between-classes-desktop.mp4
+│       ├── 04-between-classes-mobile.jpg
+│       ├── 04-between-classes-mobile.mp4
+│       ├── 05-going-home-desktop.jpg
+│       ├── 05-going-home-desktop.mp4
+│       ├── 05-going-home-mobile.jpg
+│       └── 05-going-home-mobile.mp4
 ├── preschool/
 │   ├── hero.jpg                      Page hero background
 │   ├── feature-reading.jpg           "A gentler start" section

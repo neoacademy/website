@@ -23,6 +23,30 @@
     });
   }
 
+  // Responsive media (hero + reel): each <video> carries data-desktop-* and
+  // data-mobile-* attributes; pick the matching pair for the current
+  // viewport. Files that don't exist will simply 404 and the slot renders
+  // empty — by design.
+  const mobileMQ = window.matchMedia('(max-width: 540px)');
+  const applyResponsiveMedia = (video) => {
+    const prefix = mobileMQ.matches ? 'mobile' : 'desktop';
+    const poster = video.dataset[prefix + 'Poster'];
+    const src = video.dataset[prefix + 'Src'];
+    if (poster !== undefined && video.poster !== poster) video.poster = poster;
+    const sourceEl = video.querySelector('source');
+    if (sourceEl && src !== undefined && sourceEl.getAttribute('src') !== src) {
+      sourceEl.setAttribute('src', src);
+      try { video.load(); } catch (_) {}
+    }
+  };
+  const responsiveVideos = Array.from(
+    document.querySelectorAll('video[data-desktop-poster], video[data-mobile-poster]')
+  );
+  responsiveVideos.forEach(applyResponsiveMedia);
+  mobileMQ.addEventListener('change', () => {
+    responsiveVideos.forEach(applyResponsiveMedia);
+  });
+
   // Ensure the hero video plays when in view (some browsers defer autoplay).
   document.querySelectorAll('video[autoplay]').forEach((v) => {
     const tryPlay = () => { const p = v.play(); if (p && p.catch) p.catch(() => {}); };
@@ -45,6 +69,37 @@
     const slides = Array.from(reelTrack.children);
     const videos = slides.map((s) => s.querySelector('video'));
     const total = slides.length;
+
+    // iOS Safari sometimes won't render a <video>'s poster reliably when its
+    // <source> doesn't resolve. Mirror each reel video with an <img> behind
+    // it so the picture always appears when the JPG exists; if the JPG is
+    // missing, the slot renders empty (no fallback to the other viewport).
+    const slidePosters = slides.map((slide, i) => {
+      const video = videos[i];
+      if (!video) return null;
+      const img = document.createElement('img');
+      img.alt = '';
+      img.loading = 'lazy';
+      img.decoding = 'async';
+      img.className = 'reel__slide-poster';
+      img.setAttribute('aria-hidden', 'true');
+      slide.insertBefore(img, video);
+      return img;
+    });
+    const syncPosterImgs = () => {
+      slidePosters.forEach((img, i) => {
+        const v = videos[i];
+        if (!img || !v) return;
+        const next = v.poster || '';
+        if (img.getAttribute('src') !== next) {
+          if (next) img.setAttribute('src', next);
+          else img.removeAttribute('src');
+        }
+      });
+    };
+    syncPosterImgs();
+    mobileMQ.addEventListener('change', syncPosterImgs);
+
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let index = 0;
     let fallbackTimer = null;

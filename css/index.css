@@ -461,7 +461,20 @@ button { font-family: inherit; cursor: pointer; }
   height: 100%;
   object-fit: cover;
   display: block;
+  position: relative;
+  z-index: 1;
+  background: transparent;
 }
+.reel__slide-poster {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  z-index: 0;
+}
+.reel__slide-poster:not([src]) { display: none; }
 .reel__slide::after {
   content: "";
   position: absolute;
@@ -563,7 +576,13 @@ button { font-family: inherit; cursor: pointer; }
 }
 @media (max-width: 540px) {
   .reel__track { padding: 0 6%; gap: 10px; }
-  .reel__slide { flex: 0 0 88%; }
+  .reel__slide { flex: 0 0 88%; aspect-ratio: 2 / 3; }
+  .hero {
+    height: auto;
+    aspect-ratio: 9 / 16;
+    min-height: 0;
+    max-height: none;
+  }
 }
 
 /* ---------- Contact / WhatsApp CTA section ---------- */

@@ -22,7 +22,7 @@ The **hero** and the **reel slides** load *different* files depending on the vis
 
 - `hero-desktop.jpg` / `hero-desktop.mp4` — shown on tablets and desktops
 - `hero-mobile.jpg` / `hero-mobile.mp4` — shown on phones
-- Reel: `01-before-the-bell-desktop.jpg` / `…-desktop.mp4` and `…-mobile.jpg` / `…-mobile.mp4`, and so on for slides 02–05
+- Reel: `01-desktop.{jpg,mp4}` / `01-mobile.{jpg,mp4}` … `05-desktop.{jpg,mp4}` / `05-mobile.{jpg,mp4}`
 
 There is **no fallback** between the two — if the mobile file is missing, mobile visitors see an empty slot (the desktop file is *not* used instead). Upload both pairs if you want both audiences to see the same content.
 
@@ -46,26 +46,26 @@ assets/
 │   │   ├── junior-high.jpg           Level card — Junior High
 │   │   └── senior-high.jpg           Level card — Senior High
 │   └── reel/                         "Life at Neo" carousel (5 slides, desktop + mobile each)
-│       ├── 01-before-the-bell-desktop.jpg
-│       ├── 01-before-the-bell-desktop.mp4
-│       ├── 01-before-the-bell-mobile.jpg
-│       ├── 01-before-the-bell-mobile.mp4
-│       ├── 02-recess-desktop.jpg
-│       ├── 02-recess-desktop.mp4
-│       ├── 02-recess-mobile.jpg
-│       ├── 02-recess-mobile.mp4
-│       ├── 03-jump-rope-fridays-desktop.jpg
-│       ├── 03-jump-rope-fridays-desktop.mp4
-│       ├── 03-jump-rope-fridays-mobile.jpg
-│       ├── 03-jump-rope-fridays-mobile.mp4
-│       ├── 04-between-classes-desktop.jpg
-│       ├── 04-between-classes-desktop.mp4
-│       ├── 04-between-classes-mobile.jpg
-│       ├── 04-between-classes-mobile.mp4
-│       ├── 05-going-home-desktop.jpg
-│       ├── 05-going-home-desktop.mp4
-│       ├── 05-going-home-mobile.jpg
-│       └── 05-going-home-mobile.mp4
+│       ├── 01-desktop.jpg
+│       ├── 01-desktop.mp4
+│       ├── 01-mobile.jpg
+│       ├── 01-mobile.mp4
+│       ├── 02-desktop.jpg
+│       ├── 02-desktop.mp4
+│       ├── 02-mobile.jpg
+│       ├── 02-mobile.mp4
+│       ├── 03-desktop.jpg
+│       ├── 03-desktop.mp4
+│       ├── 03-mobile.jpg
+│       ├── 03-mobile.mp4
+│       ├── 04-desktop.jpg
+│       ├── 04-desktop.mp4
+│       ├── 04-mobile.jpg
+│       ├── 04-mobile.mp4
+│       ├── 05-desktop.jpg
+│       ├── 05-desktop.mp4
+│       ├── 05-mobile.jpg
+│       └── 05-mobile.mp4
 ├── preschool/
 │   ├── hero.jpg                      Page hero background
 │   ├── feature-reading.jpg           "A gentler start" section

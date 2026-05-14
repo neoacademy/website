@@ -475,6 +475,11 @@ button { font-family: inherit; cursor: pointer; }
   z-index: 0;
 }
 .reel__slide-poster:not([src]) { display: none; }
+.reel__caption--mobile { display: none; }
+@media (max-width: 540px) {
+  .reel__caption--desktop { display: none; }
+  .reel__caption--mobile { display: block; }
+}
 .reel__slide::after {
   content: "";
   position: absolute;
